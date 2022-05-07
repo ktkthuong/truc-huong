@@ -1,0 +1,25 @@
+class StaffList extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            click: "Nguy?n Van A"
+        }
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.setState({
+            click: "Nguy?n Van B"
+        })
+    }
+
+    render() {
+
+        return (
+            <div className="container">
+                <Button onClick={this.handleClick}>{this.state.click}</Button>
+            </div>
+        );
+    }
+}
